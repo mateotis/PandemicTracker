@@ -33,7 +33,7 @@ class TravelScraper:
 	def scrapeTravel(self):
 		try: # If there is no internet access/requests fails for some reason, we just terminate
 			travelWiki = requests.get(
-				"https://en.wikipedia.org/w/index.php?title=Travel_restrictions_related_to_the_COVID-19_pandemic&oldid=954913741"
+				"https://en.wikipedia.org/w/index.php?title=Travel_restrictions_related_to_the_COVID-19_pandemic"
 			)
 		except:
 			return None
@@ -43,7 +43,7 @@ class TravelScraper:
 		soupWiki = bs(travelWiki.text, "html.parser")
 
 		listStart, listEnd = self.getListBoundaries(soupWiki)
-		if listStart is None or listEnd is None:
+		if listStart is None or listEnd is None or listStart is 0 or listEnd is 0: # Either of these values indicates a failed angling, generally because of an update to the Wikipedia page--if we encounter this, just terminate
 			return None
 
 		travelAdv = ""

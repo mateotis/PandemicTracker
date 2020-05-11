@@ -90,9 +90,7 @@ class Database:
                 countryName = row["countryName"]
                 numDoctors = row["numDoctors"]
                 numHospitalBeds = row["numHospitalBeds"]
-                self.updateCountryHealthcare(
-                    countryName, int(numDoctors), int(numHospitalBeds)
-                )
+                self.updateCountryHealthcare(countryName, numDoctors, numHospitalBeds)
         print("hospital beds updated")
 
     def updateAllCoutriesStats(self):
@@ -108,7 +106,7 @@ class Database:
                 numDeaths = row["numDeaths"]
                 numRecovered = row["numRecovered"]
                 self.updateCountryStats(
-                    countryName, int(numCases), int(numDeaths), int(numRecovered)
+                    countryName, int(numCases), int(numDeaths), (numRecovered)
                 )
             print("stats updated")
 

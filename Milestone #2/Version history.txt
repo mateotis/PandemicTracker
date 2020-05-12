@@ -1,2 +1,3 @@
 05 May 2020: Feasibility Study updated to reflect instructor feedback.
 10 May 2020: Function Point Analysis updated to reflect instructor feedback.
+12 May 2020: Gantt Chart updated to better reflect the final work distribution.

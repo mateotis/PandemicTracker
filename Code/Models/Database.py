@@ -11,10 +11,10 @@ class Database:
         # Configure MySQL
         self.conn = pymysql.connect(
             host="localhost",
-            port=3306,
+            port=8889,
             user="root",
             password="root",
-            db="pandemictracker",
+            db="PandemicTracker",
             charset="utf8",
             cursorclass=pymysql.cursors.DictCursor,
         )
